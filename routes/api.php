@@ -18,4 +18,4 @@ Route::get('/posts','PostsController@index');
 Route::post('/posts/store','PostsController@store');
 Route::get('/posts/{id?}','PostsController@show');
 Route::post('/posts/update/{id?}','PostsController@update');
-Route::post('/posts/{id?}','PostsController@destroy');
+Route::post('/posts/delete/{id?}','PostsController@destroy');
