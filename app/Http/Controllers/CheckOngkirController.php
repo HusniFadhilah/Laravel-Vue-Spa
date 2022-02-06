@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\City;
-use App\Province;
+use App\Models\City;
+use App\Models\Province;
 use Kavist\RajaOngkir\Facades\RajaOngkir;
 
 class CheckOngkirController extends Controller

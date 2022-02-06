@@ -1,6 +1,6 @@
-import AllProduct from './components/AllProduct.vue';
-import CreateProduct from './components/CreateProduct.vue';
-import EditProduct from './components/EditProduct.vue';
+import AllProduct from './components/products/AllProduct.vue';
+import CreateProduct from './components/products/CreateProduct.vue';
+import EditProduct from './components/products/EditProduct.vue';
 
 export const routes = [{
         name: 'home',

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -38,16 +38,18 @@ class User extends Authenticatable
     ];
 
     /**
-    * @return \Illuminate\Database\Eloquent\Relations\HasMany
-    */
-    public function socialAccounts(){
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function socialAccounts()
+    {
         return $this->hasMany(SocialAccount::class);
     }
 
     /**
-    * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-    */
-    public function user(){
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

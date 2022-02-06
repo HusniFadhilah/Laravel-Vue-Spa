@@ -1,12 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SocialAccount extends Model
+class Product extends Model
 {
     protected $fillable = [
-        'provider_id', 'provider_name'
+        'name',
+        'detail'
     ];
 }
