@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/posts','PostsController@index');
-Route::post('/posts/store','PostsController@store');
-Route::get('/posts/{id?}','PostsController@show');
-Route::post('/posts/update/{id?}','PostsController@update');
-Route::post('/posts/delete/{id?}','PostsController@destroy');
+Route::get('/posts', 'PostsController@index');
+Route::post('/posts/store', 'PostsController@store');
+Route::get('/posts/{id?}', 'PostsController@show');
+Route::post('/posts/update/{id?}', 'PostsController@update');
+Route::post('/posts/delete/{id?}', 'PostsController@destroy');
+
+Route::middleware('api')->group(function () {
+    Route::resource('products', ProductController::class);
+});
